@@ -193,3 +193,51 @@ Lo que tendremos que hacer es *CREAR UNA MÁQUINA NUEVA*, desde la propia aplica
 7. El siguiente apartado hace referencia a la distribución del teclado, le daremos a **SPANISH** y **DEFAULT**, podemos probar que se ha aplicado correctamente y le daremos a siguiente
 
 ![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249736178790301746/image.png?ex=66686303&is=66671183&hm=209c011dcafe8a31b988cc281ccfcf0394402a495b175177dee56c8f9aade8aa&)
+
+8. Ahora hace referencia al apartado de las particiones, en Linux hay un riesgo potencial (durante el arranque se puede cargar una instrucción pulsando la e para aprovechar que estás como root y así cambiar la contraseña) Por ello es recomendable en este apartado darle a **BORRAR EL DISCO**, darle tick a **CIFRAR SISTEMA** y poner una **CONTRASEÑA** para evitar esta vulnerabilidad, por último le daremos a **SIGUIENTE**.
+
+![Texto alternativo](https://media.discordapp.net/attachments/914613587715182622/1249738857461584043/image.png?ex=66686582&is=66671402&hm=9653031e175575ca85ea05a665bc9ba2c4e2208c1678fc175a4984efcfe172c1&=&format=webp&quality=lossless&width=720&height=385)
+
+9. Ahora nos pide que indiquemos un nombre, que nombre queremos para iniciar sesión que nombre le ponemos para el equipo y una contraseña *(RECOMENDABLE NO DARLE A INICIAR SESIÓN AUTOMATICAMENTE)*.
+
+![Texto alternativo](https://media.discordapp.net/attachments/914613587715182622/1249740888909938688/image.png?ex=66686766&is=666715e6&hm=210b490a67be56bf0d38c6541ebaff8b1d56d8e060baf28f1d7779034b5d7e67&=&format=webp&quality=lossless&width=720&height=465)
+
+10. Nos aparece un apartado a modo de resumen de todo lo que hemos configurado y tendremos que dar a **INSTALAR**
+
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249742745593974804/image.png?ex=66686921&is=666717a1&hm=cd39f3f2c2a9ed317c44f083c7cb8d4b66222220ec81533565afb253051ff257&)
+
+11. Al darle, debería aparecer otra ventana emergente en la que deberemos darle a **INSTALAR AHORA**.
+
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249744674772619264/image.png?ex=66686aed&is=6667196d&hm=1bd2de36597f4182ee6422892d1ce00e9c2241304900153d72d55e1d44fc48f5&)
+
+12. Debería comenzar la instalación.
+
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249745150297505822/image.png?ex=66686b5e&is=666719de&hm=86a820ebfc4a73c906d3d1bbe4a32d68336e436086badc528a640319d6d3c736&)
+
+13. Al terminar se debería de ver tal que así y le daremos a **HECHO** y la máquina se reiniciará como tal, puede ser que nos aparezca al reiniciarse otra vez lo que nos aparecia al principio de *TRY / INSTALL* cosa que deberemos evitar, si nos aparece esto cerraremos la máquina directamente, es decir, la apagamos.
+
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249748592265138238/image.png?ex=66686e93&is=66671d13&hm=e5c474986c49af1b7be425a3b404978169d58cb24a42f469850304090acfbb58&)
+
+14. Ahora debemos entrar en la **CONFIGURACIÓN** de la máquina en VirtualBox que se encuentra en el menú de la parte superior.
+
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249755223329603584/image.png?ex=666874c0&is=66672340&hm=ac65885e95a04d44fcbbd09d0f5a8a99d72232c7ffb39e1f1b6a8d9e5f6b2271&)
+
+15. Ahora iremos al apartado de **ALMACENAMIENTO** y dentro de este, debajo del **CONTROLADOR: IDE**, nos encontraremos con el nombre de la ISO, esto por decirlo de algún modo es como si metieramos un usb de arranque en nuestra máquina física para instalar un sistema operativo, pues una vez instalado, hay que quitarlo para que no salte el instalador, por ello le daremos click derecho encima del nombre de **Parrot-security-6.1_amd64.iso** y la daremos a **ELIMINAR** CONEXIÓN**
+
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249756003516289185/image.png?ex=6668757a&is=666723fa&hm=cf6170f1462fd82e8ceb1e5af6625fab0762d452cb61bd45d1c8dacadf5ee124&)
+
+16. Ahora deberemos arrancar la máquina y lo primero que nos pedirá es la contraseña de cifrado del sistema operativo que hemos introducido anteriormente.
+
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249757211312263229/image.png?ex=6668769a&is=6667251a&hm=d8ba97927e4101d1539c42073de6a806d31f0e2f8beece3f2b6ff881b0a3d7c3&)
+
+17. Una vez introducida se queda un rato desencriptando todo y luego nos aparecerá la siguiente ventana en la que le daremos a la primera opción **Parrot OS 6 GNU/Linux**
+
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249758518073102366/image.png?ex=666877d2&is=66672652&hm=06087b4272eed1be148a034b9131fb794b6cc06fa94f70fe3ee513eab11355d6&)
+
+18. Ahora nos debería de aparecer la ventana de inicio de sesión en la que nos pedirá la contraseña del usuario.
+
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249759643433959454/image.png?ex=666878de&is=6667275e&hm=83d17c2df3121971b5055a55fffe9119f86d9c791832376d542822912b0f0e8e&&)
+
+19. Y por último tras seguir todos los pasos anteriores nos deberiamos de encontrar finalmente con el escritorio.
+
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249759945822572577/image.png?ex=66687926&is=666727a6&hm=33ac3eba288ea7074672edb98f887c631d801d22e8c754ecafbe513cc31eb60f&)
