@@ -171,3 +171,12 @@ Lo que tendremos que hacer es añadir la máquina de parrot, desde la propia apl
 ![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249633811860291604/image.png?ex=666803ad&is=6666b22d&hm=572c6d32569a193568ad8c726b26a721db939dc7d752e00bdec2e9138fa361bd&)
 
 
+## Arranque de la máquina PARROT
+
+Una vez que hemos realizado todos los pasos anteriores con éxito le daremos a **INICIAR** que es el botón que se encuentra en la parte superior derecha que tiene el icono de una flecha apuntando hacia la derecha.
+
+![Texto alternativo](https://media.discordapp.net/attachments/914613587715182622/1249643808753319947/image.png?ex=66680cfd&is=6666bb7d&hm=c3451592e72db8eec9e7a3c0aa4b20ee5c4d6911154d6bb5782c728eb722b6cb&=&format=webp&quality=lossless&width=720&height=398)
+
+Al darle a iniciar, estará unos 2 minutos aproximadamente ejecutandose, **NO HAY QUE HACER NADA** simplemente esperamos y si todo va correctamente debería de aparecer lo siguiente
+
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249644418131165184/image.png?ex=66680d8e&is=6666bc0e&hm=0600c7a429889ba7b0f9d5e72c17ef66ec4e0df62957c8a48ec4b43121791e54&)
