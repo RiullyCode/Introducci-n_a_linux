@@ -64,7 +64,7 @@ Aunque Windows puede usarse para pentesting, presenta varias desventajas en comp
 1. Lo primero que haremos será entrar en el siguiente [link](https://parrotsec.org/download/)
  el cual nos redirigrá a la página principal del sistema operativo parrot en el apartado de descargas *(a 09/06/2024 se ve de la siguiente manera)*
 
-![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249441841762271283/image.png?ex=666750e4&is=6665ff64&hm=8a026507c730cc390a32e8115e0c90347bd3e40b414f643df9bbc425329cd9b2&)
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249706018863321258/image.png?ex=666846ed&is=6666f56d&hm=dde34a2ed28111e33c650eae980cc2bbb942287ce31792ba2a46e266c87682df&)
 
 En este apartado deberemos elegir el apartado que más nos convenga en función de lo que queramos, aquí una breve explicación
 
@@ -86,27 +86,22 @@ En este apartado deberemos elegir el apartado que más nos convenga en función 
 - **WSL**:
    - Permite usar todo el poder del sistema operativo Parrot en Windows mediante el Subsistema de Windows para Linux.
 
-**En nuestro caso vamos a elegir la opción virtual ya que lo vamos a instalar en una máquina virtual.**
+**En nuestro caso vamos a elegir la opción LIVE.**
+(Lo vamos a instalar en un máquina virtual pero si nos bajamos la opción virtual vendrá ya la máquina preconfigurada cosa que no queremos)
 
-2. Ahora tendremos que elegir la edición correspondiente, en nuestro caso elegiremos la **security**, la opción *home* está pensada de cara a un uso más domestico.
+2. Ahora tendremos que elegir la edición correspondiente, en nuestro caso elegiremos la **SECURITY**, la opción *home* está pensada de cara a un uso más domestico.
 
-![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249454587639758930/image.png?ex=66675cc3&is=66660b43&hm=76599274531485fa5db5ca0f8b3f82ba4a6338ca7a992be987cd484ae1ab2f47&)
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249707943759446076/image.png?ex=666848b8&is=6666f738&hm=e258120c981d33bcd0433a68a659aefde2d51efc2c03f1c952df9b3939cc6601&)
 
-3. Por último deberemos de elegir el tipo de arquitectura, nosotros como norma general elegiremos el tipo de arquitectura **AMD64**, pero dependerá del uso.
+3. Por último deberemos de elegir el tipo de arquitectura **AMD64**.
 
-![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249460388395880560/image.png?ex=6667622a&is=666610aa&hm=54f1feeb820c04d8265fdd6be5b324bc1c975af70d2375d257d36ab98e1af5ce&)
+![Texto alternativo](https://media.discordapp.net/attachments/914613587715182622/1249709853577056266/image.png?ex=66684a7f&is=6666f8ff&hm=7f61fa9d43791a9362875e28cb11a23f55deca9698cb3ac3dfc4476ddbf16150&=&format=webp&quality=lossless&width=720&height=216&)
 
-Para determinar qué opción deberías elegir entre AMD64 y ARM64, debes considerar el tipo de procesador que tiene tu dispositivo.
 
-1. **AMD64**:
-   - Esta opción es para sistemas con arquitectura de 64 bits de AMD o Intel, que son los procesadores más comunes en ordenadores de escritorio y portátiles modernos. Si tu dispositivo es una ordenador estándar con un procesador Intel o AMD reciente, deberías elegir esta opción.
-
-2. **ARM64**:
-   - Esta opción está diseñada para dispositivos con procesadores basados en ARM, que son comúnmente utilizados en dispositivos móviles, tablets y algunos dispositivos de Internet de las Cosas (IoT). También es la arquitectura usada por algunos modelos de Raspberry Pi y otros dispositivos embebidos. Si estás usando una Raspberry Pi u otro dispositivo similar con un procesador ARM de 64 bits, esta es la opción adecuada para ti.
 
 Una vez finalizados todos los pasos anteriores aparece lo siguiente: 
 
-![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249462606314606785/image.png?ex=6667643b&is=666612bb&hm=c0e9cbe27d2d03c6362ce014158c1f3793d444e34354c50b576de1b2f98106b7&)
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249710369883291678/image.png?ex=66684afa&is=6666f97a&hm=e4de6c083bed15f1385b5564772cce90d061c8b3b797e664c93cee2a28720b5b&)
 
 Basicamente es una breve descripción de la versión que vamos a descargar, nos da diferentes opciones para ejecutar la descarga y **nos dice las credenciales de serie para nuestro sistema**
 
@@ -115,11 +110,6 @@ user: parrot
 password: parrot
 ```
 
-Cuando le damos al botón de *download* vemos que nos encontramos con diferentes opciones.
-
-![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249618807484452865/image.png?ex=6667f5b4&is=6666a434&hm=5d02d49bfb527e48091d9ae3f015dac0935265021296c471a4410cbfdb158ef1&)
-
-Le daremos a la opción que corresponda que es donde lo vamos a emular, en mi caso usaré vmware así que le daré al botón de **VirtualBox**.
 
 ## Descarga de VirtualBox
 
@@ -148,35 +138,58 @@ Para ejecutar una máquina virtual existen diferentes aplicaciones, en mi caso h
 
 ## INSTALACIÓN DE LA MÁQUINA PARROT EN VIRTUALBOX
 
-Lo que tendremos que hacer es añadir la máquina de parrot, desde la propia aplicación de parrot ***se te ve baja una máquina directamente, no una ISO*** por lo que tendremos que hacer en VirtualBox es añadir una máquina no crear una nueva *(esto sería en caso de que nos hubieran dado una ISO)*.
+Lo que tendremos que hacer es *CREAR UNA MÁQUINA NUEVA*, desde la propia aplicación web de Parrot ***se te ve baja una ISO*** por lo que tendremos que hacer en VirtualBox es añadir crear una máquina nueva.
 
-1. En el apartado de descargas, donde tenemos la máquina **Parrot-security-6.1_amd64** le daremos click derecho y le daremos a **ABRIR** *(debería aparecer el icono de VirtualBox, no adjunto captura porque no me deja)*:
+1. En el apartado de descargas, Deberemos de tener la ISO **Parrot-security-6.1_amd64**.
 
-![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249629863699157085/image.png?ex=66680000&is=6666ae80&hm=9096851e48ada88106876b8519eb7faeb6c39e7713451af7ca0dcca11d069327&)
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249722420558958622/image.png?ex=66685633&is=666704b3&hm=3e0314e5524bcbd76bc3ce72ca062c043847e3792aa2f41668e6eeec39977c79&)
 
-2. Ahora nos debería de salir una ventana emergente en el virtualBox en la cual nos pone una resumen de las características de la máquina que vamos a agregar y la ubicación de la carpeta base de la máquina, y le daremos a terminar.
+2. Ahora dentro de virtualBox, en el apartado superior nos deberíamos encontrar un menú, en el cual le deberemos dar a **NUEVA** (*es una especie de estrella azul*).
 
-![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249630543495172187/image.png?ex=666800a2&is=6666af22&hm=f05503ac098dbcb4c706faaf124819a28ed58117dadd40fb8b677fe4d1e7a373&)
+![Texto alternativo](https://media.discordapp.net/attachments/914613587715182622/1249719798494138480/image.png?ex=666853c2&is=66670242&hm=b6059f4f9f2eb21805035a245a301a558d801ac07770515001cd8be784c99592&=&format=webp&quality=lossless)
 
-3. Ahora nos debería de aparecer otra ventana emergente en la que nos solicitará que aceptemos los terminos y condiciones, le daremos a **ACEPTAR**
+3. Ahora nos debería de aparecer una ventana emergente en la que nos solicitará un nombre para la máquina, la carpeta en que se instalará la máquina y la ubicación de la imagen ISO que hemos descargado anteriormente (el resto de campos se autocompletaran al poner la ISO). Por último le daremos a **SIGUIENTE**.
 
-![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249631681414041691/image.png?ex=666801b1&is=6666b031&hm=1711c1e8f1f4e815745af8d4e08bec7c73c35521467f0d25223ad7e42914e1b6&)
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249724260776149032/image.png?ex=666857ea&is=6667066a&hm=bcf78b1312850073a5d2138fb9e73897c1108981f149f25f23003896bb8af8fa&)
 
-4. En la parte derecha de VirtualBox nos aparecerá una  barra de progreso en el que se inidica el tanto por ciento de importación realizada.
+4. La ventana emergente cambiará y ahora tendremos que ajustar la memoria RAM que utilizará la máquina y el número de procesadores que usará. En mi caso pondré **8192MB Y 3CPUs**. Cabe recalcar que no hace falta tanta potencia pero en mi caso tengo un equipo relativamente potente y no hay problema.
 
-![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249633376617627708/image.png?ex=66680346&is=6666b1c6&hm=6dbe357f793cb49ec027e02e83b88d0115efbadbc5bc8be20e91cd5a7f1c5b11&)
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249725520573235331/image.png?ex=66685916&is=66670796&hm=9bec2d6682aafa86216fa4bb2ebe3fc8111fa23ec05d76fa57ac8de77b1b0c9c&)
 
-5. Si todo lo anterior ha transcurrido correctamente se nos debería de haber agregado la máquina correctamente y deberiamos de ver el VirtualBox de la siguiente manera.
+5. La ventana emergente cambiará y ahora deberemos indicar el tamaño del disco duro virtual, que será donde se almacenen los datos de la máquina, pondremos **60 GB** y le daremos a **SIGUIENTE**.
 
-![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249633811860291604/image.png?ex=666803ad&is=6666b22d&hm=572c6d32569a193568ad8c726b26a721db939dc7d752e00bdec2e9138fa361bd&)
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249727810709356603/image.png?ex=66685b38&is=666709b8&hm=3ed792edb12144d5d89361472b4869d2e1803a65fae23c0fbc90650a69afc6d8&)
 
+6. Por último nos aparecerá un breve resumen de la configuración que hemos realizado en la máquina virtual, si vemos todo correcto, le daremos al botón de **TERMINAR.**
+
+![Texto alternativo](https://media.discordapp.net/attachments/914613587715182622/1249729444780970007/image.png?ex=66685cbe&is=66670b3e&hm=69875a02c9e1b26390efe7a3c39d5f144557ed874301f2d8b4afa907a2af6279&=&format=webp&quality=lossless&width=720&height=371)
 
 ## Arranque de la máquina PARROT
 
-Una vez que hemos realizado todos los pasos anteriores con éxito le daremos a **INICIAR** que es el botón que se encuentra en la parte superior derecha que tiene el icono de una flecha apuntando hacia la derecha.
+1. Una vez que hemos realizado todos los pasos anteriores con éxito le daremos a **INICIAR** que es el botón que se encuentra en la parte superior derecha que tiene el icono de una flecha apuntando hacia la derecha *(si aparece la foto de linux en blanco y negro es normal)*.
 
-![Texto alternativo](https://media.discordapp.net/attachments/914613587715182622/1249643808753319947/image.png?ex=66680cfd&is=6666bb7d&hm=c3451592e72db8eec9e7a3c0aa4b20ee5c4d6911154d6bb5782c728eb722b6cb&=&format=webp&quality=lossless&width=720&height=398)
+![Texto alternativo](https://media.discordapp.net/attachments/914613587715182622/1249729686062370916/image.png?ex=66685cf8&is=66670b78&hm=089ca0605d89aeb6eb841ca05253c99e852de928cae4117910562855612d4542&=&format=webp&quality=lossless&width=720&height=275)
 
-Al darle a iniciar, estará unos 2 minutos aproximadamente ejecutandose, **NO HAY QUE HACER NADA** simplemente esperamos y si todo va correctamente debería de aparecer lo siguiente
+2. Al darle a iniciar, nos encontraremos con la siguiente ventana, en la que deberemos darle a **TRY INSTALL**
 
-![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249644418131165184/image.png?ex=66680d8e&is=6666bc0e&hm=0600c7a429889ba7b0f9d5e72c17ef66ec4e0df62957c8a48ec4b43121791e54&)
+![Texto alternativo](https://media.discordapp.net/attachments/914613587715182622/1249730928868196462/image.png?ex=66685e20&is=66670ca0&hm=4f572955f3805fa4b68b0a160d589d90dd8a11a640aac73e732941ef34e5c63e&=&format=webp&quality=lossless)
+
+3. Después se instalará el sistema operativo, y apareceremos en el escritorio.
+
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249732469133938799/image.png?ex=66685f8f&is=66670e0f&hm=c2448f8fa89195aff40556fcfdae63b3f5f89544259a51cc15b9cccf7c71f7d6&)
+
+4. Si nos fijamos vienen 5 accesos directos en el escritorio, hay uno que se llama **INSTALL PARROT**
+
+![Texto alternativo](https://media.discordapp.net/attachments/914613587715182622/1249733366773710931/image.png?ex=66686065&is=66670ee5&hm=551465d8aaa0cfeb1aa141868c887b138559afa6fad2fddd9b5ea9ffe672b6e9&=&format=webp&quality=lossless)
+
+5. Hacemos doble click y se nos abrirá la siguiente ventana emergente en la que deberemos configurar el sistema operativo. Lo primero hace referencia al idioma, pondremos **ESPAÑOL DE ESPAÑA** y le daremos a **SIGUIENTE**.
+
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249734643662454896/image.png?ex=66686195&is=66671015&hm=5bae3791ff3e08fa80aef8b27df1c3ec7ad2c9cb4858545427b3c13ce077422a&)
+
+6. El siguiente apartado hace referencia a la ubicación, le daremos **EUROPE**,a **MADRID** y le daremos a **SIGUIENTE**.
+
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249735060995706880/image.png?ex=666861f9&is=66671079&hm=ba2fb3058165e3afe6ee72c3758851459d212d80e1e00c7586eb45cf6f71d0f1&)
+
+7. El siguiente apartado hace referencia a la distribución del teclado, le daremos a **SPANISH** y **DEFAULT**, podemos probar que se ha aplicado correctamente y le daremos a siguiente
+
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249736178790301746/image.png?ex=66686303&is=66671183&hm=209c011dcafe8a31b988cc281ccfcf0394402a495b175177dee56c8f9aade8aa&)
