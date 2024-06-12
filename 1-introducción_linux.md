@@ -45,8 +45,6 @@ Un sistema operativo (SO) es un programa que controla todo el hardware y softwar
 3. **Seguridad Adicional**: Incluye características de privacidad y seguridad adicionales, como cifrado y anonimato.
 4. **Herramientas Preinstaladas**: También viene con una amplia gama de herramientas para pentesting y seguridad informática.
 
-![Kali_parrot](https://cdn.discordapp.com/attachments/914613587715182622/1249393900129620139/Kali_vs_Parrot.png?ex=6667243e&is=6665d2be&hm=6abffa17b055f200fa1bac05bc0b3a091623ea6ebd96030043ae67b014536ba1&)
-
 
 ### Uso de Windows para Pentesting (no recomendado)
 
