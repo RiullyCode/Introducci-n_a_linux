@@ -241,3 +241,59 @@ Lo que tendremos que hacer es *CREAR UNA MÁQUINA NUEVA*, desde la propia aplica
 19. Y por último tras seguir todos los pasos anteriores nos deberiamos de encontrar finalmente con el escritorio.
 
 ![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1249759945822572577/image.png?ex=66687926&is=666727a6&hm=33ac3eba288ea7074672edb98f887c631d801d22e8c754ecafbe513cc31eb60f&)
+
+
+## Personalización del entorno de PARROT
+
+1. Borramos la carpeta **README.license** del escritorio
+
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1250401592486789160/image.png?ex=666aceba&is=66697d3a&hm=9954b41166970c4dad56faa8575110a868b2e41c1c38217774a9138cef0e2d44&)
+
+2. Abrimos una terminal (parte superior le damos a este icono).
+
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1250401982334894140/image.png?ex=666acf17&is=66697d97&hm=84dada15ce5e35a112d5a5e2164a077dee32b32356dd4df16113d3d76ccba529&)
+
+3. En la terminal nos moveremos usando el comando cd al escritorio (desktop) y luego crearemos una carpeta que la llamaremos con el mismo nombre que tiene nuestro usuario, en mi caso **Riully**
+```
+cd Desktop/
+```
+- después haremos lo siguiente:
+```
+mkdir Riully
+```
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1250403209328070757/image.png?ex=666ad03c&is=66697ebc&hm=217fac6ce724dacf4125dab043314c54fc8c0b730e010775dabf6b6835093397&)
+
+- Si hemos realizado lo anterior correctamentes nos debería de crear una carpeta en el escritorio con el nombre de nuestra cuenta tal que así:
+
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1250405167501934663/image.png?ex=666ad20f&is=6669808f&hm=66499d4f810dfcf768bccf3f9a17dc470ada2f6ff32ce1ff538a8fdb73ce3ca8&)
+
+### Actualización del sistema
+
+1. Antes de entrar en el apartado de la personalización vamos a actualizar el sistema. Volvemos a a abrir la terminal como hicimos anteriormente:
+
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1250401982334894140/image.png?ex=666acf17&is=66697d97&hm=84dada15ce5e35a112d5a5e2164a077dee32b32356dd4df16113d3d76ccba529&)
+
+- Abrimos la consola y escribiremos **sudo su**, le daremos a intro y luego nos pedirá la contraseña que tenemos para nuestro usuario, esto se hace para invocar los permisos de administrador:
+
+```
+sudo su
+```
+
+![Texto alternativo](https://cdn.discordapp.com/attachments/914613587715182622/1250412172832538654/image.png?ex=666ad895&is=66698715&hm=e0d4e91bb0aef5aba881f3096d1e91495e26d5306bd6482047ef0e533b7303dd&)
+
+
+- Una vez estemos como root, intentaremos hacer un **apt update**, lo más probable es que nos de error al hacerlo.
+
+![alt text](image.png)
+
+- Para poder arreglar lo que casca nos deberemos dirigir a la ruta que hemos indicado en la captura que se encuentra debajo haciendo un nano a la ruta en cuestión
+
+```
+nano /etc/apt/sources.list
+```
+
+![alt text](image-1.png)
+![alt text](image-2.png)
+
+- Una vez hecho lo anterior nos aparecerá una primera linea como la siguiente:
+![alt text](image-3.png)
