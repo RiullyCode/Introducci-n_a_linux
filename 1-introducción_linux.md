@@ -296,4 +296,167 @@ nano /etc/apt/sources.list
 ![alt text](image-2.png)
 
 - Una vez hecho lo anterior nos aparecerá una primera linea como la siguiente:
+
 ![alt text](image-3.png)
+
+- Lo que debemos hacer es comentar la primera del cuadro del texto poniendo un **"#"** al principio, debería quedar de la siguiente manera.
+
+![alt text](image-4.png)
+
+- Para guardar los cambios haremos **CTRL S** y para cerrar el texto **CTRL X** y volveremos a hacer un **APT UPDATE**
+
+![alt text](image-5.png)
+
+- Si sale de la siguiente manera es porque hemos realizado con exito la actualización.
+
+![alt text](image-6.png)
+
+- En parrot no deberemos usar más el **APT UPGRADE** porque es probable que se cargue el sistema, Parrot tiene su propia forma de actualizarse que se llama **parrot-upgrade** así que vamos a ponerlo.
+```
+parrot-upgrade
+```
+![alt text](image-7.png)
+
+- Si todo ha ido correctamente nos aparecerá de la siguiente manera:
+
+![alt text](image-8.png)
+
+- Podemos observar que en mi caso hay 3 paquetes que se instalaron de forma automática y que ya no son necesarios que son los siguientes:
+
+![alt text](image-9.png)
+
+- Por lo tanto vamos a desinstalarlos usando el siguiente comando
+```
+apt-remove (nombre)
+```
+- En este caso como serian 3 paquetes podriamos hacer lo siguiente
+```
+sudo apt remove python3-markdown samba-ad-provision samba-dsdb-modules
+```
+![alt text](image-10.png)
+
+- Nos preguntará si los queremos eliminar, escribiremos una **S** y le daremos a **INTRO**
+
+![alt text](image-11.png)
+
+- Ahora haremos un **APT UPDATE** y veremos que se ha actualizado todo correctamente
+
+![alt text](image-12.png)
+
+## Instalación y configuración de Bspwm y Sxhkd
+
+**BSPWM** es el entorno de trabajo en el que vamos a estar operando, nos vamos a mover a descargas
+```
+cd /home/riully/Descargas/
+```
+
+![alt text](image-14.png)
+
+- Una vez aquí instalaremos todos los paquetes que vamos a usar para la configuración de atajos y para la personalización. Dejaré aquí para que se copien todos los archivos de los que estariamos hablando
+
+```
+apt install build-essential git vim xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev libxcb-shape0-dev
+```
+
+![alt text](image-15.png)
+
+- Ahora al igual que antes escribiremos una **S** y le daremos a **INTRO**
+
+![alt text](image-16.png)
+
+- Una vez instalado haremos un **APT UPDATE**
+
+![alt text](image-17.png)
+
+- Nos saldremos del modo root escribiendo **EXIT**
+
+![alt text](image-18.png)
+
+- Ahora vamos a clonar los repositorios de **bswpm** y **sxhkd** de la siguiente manera:
+```
+git clone https://github.com/baskerville/bspwm.git
+```
+```
+git clone https://github.com/baskerville/sxhkd.git
+```
+
+![alt text](image-19.png)
+
+- Ahora vamos a instalarlos, por lo que lo que tendremos que hacer será lo siguiente:
+```
+cd bspwm
+```
+```
+ls
+```
+```
+make
+```
+![alt text](image-20.png)
+
+- Lo sigueinte será hacer un
+```
+sudo make install
+```
+![alt text](image-21.png)
+
+- Nos pedirá la contraseña y se instalará posteriormente
+
+![alt text](image-22.png)
+
+- Si ponemos el siguiente comando comprobaremos que se ha instalado
+
+![alt text](image-23.png)
+
+- Ahora podremos los siguiente comandos para salirnos de esta ruta e ir a la correspondiente para bajarnos el otro
+
+```
+cd ..
+```
+```
+cd sxhkd/
+```
+
+![alt text](image-24.png)
+
+- Ahora escribiremos el comando make para proceder con al instalación
+```
+make
+```
+
+![alt text](image-25.png)
+
+- Y ahora sudo make install
+
+```
+sudo make install
+```
+
+![alt text](image-26.png)
+
+- Ahora hacemos un which para comprobar que se ha instalado
+
+```
+which sxhkd
+```
+
+El archivo de configuración de **bspwm** -> **bspwmrc** y de **sxhkd** es **sxhkdrc**, de primeras estos archivos no existen por lo que vamos a crear usando **mkdir** en ```.config ``` que es un archivo oculto del sistema, accederemos a el metiendo el metiendo lo siguiente:
+```
+cd ..
+```
+
+```
+mkdir ~/.config/{bspwm,sxhkd} 
+```
+
+![alt text](image-27.png)
+
+- Dentro de bspwm , hay un directorio examples que debería detener 2 archivos **bspwmrc** y **sxhkdrc**
+```
+cd bspwm/examples/
+```
+```
+ls
+```
+
+![alt text](image-28.png)
