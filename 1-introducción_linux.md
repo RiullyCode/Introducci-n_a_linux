@@ -460,3 +460,49 @@ ls
 ```
 
 ![alt text](image-28.png)
+
+- Vamos a comenzar con los pasos más importantes:
+```
+cp bspwmrc ~/.config/bspwm/
+```
+```
+cp sxhkdrc ~/.config/sxhkd/
+```
+
+![alt text](image-29.png)
+
+- Ahora vamos a ir configurando  el archivo **sxhkdrc** primero entraremos en la ubicación de **sxhkd** haremos un ls para comprobar que está el archivo y luego haremos un nano para modificarlo.
+
+```
+cd ~/.config/sxhkd/
+```
+```
+ls
+```
+```
+nano sxhkdrc
+```
+![alt text](image-30.png)
+
+- El aspecto que tiene el archibo de configuración es el siguiente:
+
+![alt text](image-31.png)
+
+- En el archivo las teclas mencionadas como **super** hacen referencia a la **tecla de windows** y **return** es el **enter** y al pulsarlas abriria un urxvt pero esto no existe porque es un gnome-terminal, vamos a emplear una kitty que por defecto no existe por lo que vamos a descargarla, nos salimos del archivo de texto usando **CTRL + X**, nos podemos en sudo y la instalamos, en total deberemos ejecutar los siguientes comandos:
+
+``` 
+sudo su
+```
+```
+apt install kitty
+```
+- Y le damos a la **S** para confirmar la instalación
+![alt text](image-32.png)
+
+- Cabe recalcar que la instalación de kitty que acabamos de hacer al hacerla de esta manera no es la última disponible pero más adelante lo upgradearemos, vamos a comprobar la versión de la siguiente manera
+```
+kitty --version
+```
+![alt text](image-33.png)
+
+6:20
