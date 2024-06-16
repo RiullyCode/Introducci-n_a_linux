@@ -329,9 +329,9 @@ apt-remove (nombre)
 ```
 - En este caso como serian 3 paquetes podriamos hacer lo siguiente
 ```
-sudo apt remove python3-markdown samba-ad-provision samba-dsdb-modules
+apt remove python3-markdown samba-ad-provision samba-dsdb-modules
 ```
-![alt text](image-10.png)
+![alt text](image-52.png)
 
 - Nos preguntará si los queremos eliminar, escribiremos una **S** y le daremos a **INTRO**
 
@@ -508,6 +508,9 @@ kitty --version
 ![alt text](image-34.png)
 
 - Ahora haremos un nano al archivo de configuracion **sxhkdrc**
+```
+nano sxhkdrc
+```
 
 ![alt text](image-35.png)
 
@@ -597,3 +600,58 @@ super + alt + {Left,Up,Down,Right}
 ![alt text](image-51.png)
 
 AHORA FINALMENTE HAREMOS ```CTRL + S``` Y ```CTRL + X``` (guardar y cerrar) y se nos saldrá del archivo.
+
+- Nos salimos como usuario root usando **EXIT**
+```
+exit
+```
+- Y acto seguido escribimos la siguiente ruta:
+```
+cd /home/riully/.config/bspwm/
+```
+![alt text](image-53.png)
+
+- Ahora hacemos un **mkdir**
+```
+mkdir scripts
+```
+```
+cd scripts
+```
+![alt text](image-54.png)
+
+- Ahora con un touch creamos...
+```
+touch bspwm_resize
+```
+
+- Y ahora un:
+```
+chmod +x bspwm_resize
+```
+
+- Y por último_
+```
+nano bspwm_resize
+```
+![alt text](image-55.png)
+
+- y dentro del archivo deberemos de meter el siguiente contenido:
+```
+#!/usr/bin/env dash
+
+if bspc query -N -n focused.floating > /dev/null; then
+	step=20
+else
+	step=100
+fi
+
+case "$1" in
+	west) dir=right; falldir=left; x="-$step"; y=0;;
+	east) dir=right; falldir=left; x="$step"; y=0;;
+	north) dir=top; falldir=bottom; x=0; y="-$step";;
+	south) dir=top; falldir=bottom; x=0; y="$step";;
+esac
+
+bspc node -z "$dir" "$x" "$y" || bspc node -z "$falldir" "$x" "$y"
+```
