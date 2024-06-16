@@ -503,4 +503,97 @@ kitty --version
 ```
 ![alt text](image-33.png)
 
-6:20
+- Si hacemos un which veremos donde se encuentra instalado (la ruta)
+
+![alt text](image-34.png)
+
+- Ahora haremos un nano al archivo de configuracion **sxhkdrc**
+
+![alt text](image-35.png)
+
+- Y lo que haremos será modificar alguno de los atajos que tiene, vamos a modificar el terminal emulator para que pulsar **super + return** que recordamos que **super** era la **tecla de windows** y **return** era la tecla **enter**
+```
+/usr/bin/kitty
+```
+![alt text](image-36.png)
+
+- Es lo único que tendríais que configurar del archivo por lo que ahora haremos **CTRL + S** que sería para guardar. Debería verse el archivo tal que así:
+
+![alt text](image-37.png)
+
+- Un poco más abajo nos encontraremos un apartado que se llama **quit/restart bspwm** que nos encontraremos como default **super + alt + {q,r}**, esto significa lo siguiente. Nosotros vamos en meter en **bspwmrc** todas las instrucciones que queremos que se ejecuten cuando nos cargue el entorno *(configuración del fondo de pantalla, hablitación clipboard bidireccional)*. Cuando tu retocas con estas instrucciones el **bspwmrc** necesitas que se actualice y se apliquen los cambios tienes que reiniciar el servicio de **bspwm** y eso se hace con la instruccion que hemos visto anteriormente **super + alt + r**. 
+
+- Cuando usemos **super + alt + q** sería como quitar el **bspwm** y volver a la pantalla de bloqueo (sin cerrarlo)
+
+- cuando nosotros usemos **super + alt + {q,r}** y lo vamos a cambiar por **super + shift + {q,r}**
+```
+super + shift + {q,r}
+```
+![alt text](image-38.png)
+
+- En el apartado que se encuentra más abajo nos encontraremos el **close and kill** que es un apartado exclusivo para cerrar la ventana de **bspwm** que tengamos abierta.
+
+- En este apartado la configuración por default veremos que pone lo siguiente: 
+
+![alt text](image-39.png)
+
+- Nosotros lo vamos a cambiar por *super + {_,shift + }q*
+```
+super + {_,shift + }q
+```
+
+![alt text](image-40.png)
+
+- Ahora explicaremos un apartado que se llama fouces the node in the given direction, que lo que haces es que muestra un reborde blanco en la ventana que estas trabajando, basicamente esto te es util cuando tienes multiples ventanas abiertas.
+
+![alt text](image-41.png)
+
+- Vamos a cambiarlo porque actualmente se hace con las letras h,j,kl y vamos a hacer que esto se haga por las fechas de dirección por lo que cambiaremos esa linea por la siguiente:
+``` 
+super + {_,shift + }{Left,Down,Up,Right}
+```
+![alt text](image-43.png)
+
+- Otro apartado que vamos a tener que tocar es **preselected the direction**, en este, vamos a elegir el tamaño de las ventanas que vamos a abrir, y lo tendremos que cambiar las letras por las flechas como antes, la linea cambiada quedaria de la siguiente manera:
+```
+super + ctrl + {Left,Down,Up,Right}
+```
+
+![alt text](image-44.png)
+
+- En el apartado de **cancel the preselection for the focused node** sirve para quitar una preseleccion de ventana, vamos a modificarlo para dejarlo de la siguiente manera.
+```
+super + ctrl + alt + space
+```
+
+![alt text](image-45.png)
+
+- En la última parte del codigo vamos a encontrarnos lo siguiente, que lo deberemos de **eliminar**
+
+![alt text](image-46.png)
+
+- Esto es debido a que esto más adelante lo vamos a controlar gracias a 2 archivos que vamos a crear personalizados.
+
+- El último apartado que se llama **move a floating window** hace referencia a mover ventanas flotantes, vamos a modificiarlo para que quede la siguiente manera:
+```
+super + alt + {Left,Down,Up,Right}
+```
+
+![alt text](image-48.png)
+
+- Ahora vamos a crear uno nuevo que se llama **custom resize** para que cuando haga windows alt izquierda la ventana se vaya desplazando hacia la izquierda para ajustar su tamaño básimacamente.
+
+- En la imagen que tenemos debajo de este parrafo vemos lo que seria el primer apartado de la configuracion, ponemos el nombre con un # delante para que lo ignore, es decir, es como un comentario y luego ponemos las teclas con las que se activaria.
+
+![alt text](image-49.png)
+
+- El mapeo de como lo tendria que hacer lo haremos posteriormente en un apartado que se llama **bspwm_resize**, pongo el texto completo con la ruta en la que estaria
+```
+# Custom Resize
+super + alt + {Left,Up,Down,Right}
+/home/riully/.config/bspwm/scripts/bspwm_resize {west,south,north,west}
+```
+
+![alt text](image-51.png)
+
+AHORA FINALMENTE HAREMOS ```CTRL + S``` Y ```CTRL + X``` (guardar y cerrar) y se nos saldrá del archivo.
