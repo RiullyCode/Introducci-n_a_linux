@@ -655,3 +655,162 @@ esac
 
 bspc node -z "$dir" "$x" "$y" || bspc node -z "$falldir" "$x" "$y"
 ```
+AHORA FINALMENTE HAREMOS ```CTRL + S``` Y ```CTRL + X``` (guardar y cerrar) y se nos saldrá del archivo.
+
+## Instalación Polybar, Picom y Rofi
+
+- Entramos como administradores con el comando ```sudo su```
+```
+sudo su
+```
+![alt text](image-56.png)
+
+- Ahora vamos a instalar la polybar
+```
+apt install polybar
+```
+
+![alt text](image-57.png)
+
+- Hay que escribir una S para confirmar que queremos continuar
+
+![alt text](image-58.png)
+
+- y ya estaría 
+
+![alt text](image-59.png)
+
+- Ahora vamos a instalar picom, deberemos entrar en el siguiente [enlace](https://github.com/yshui/picom)
+ y copiar el texto que ponga el siguiente apartado
+
+![alt text](image-60.png)
+
+```
+libconfig-dev libdbus-1-dev libegl-dev libev-dev libgl-dev libepoxy-dev libpcre2-dev libpixman-1-dev libx11-xcb-dev libxcb1-dev libxcb-composite0-dev libxcb-damage0-dev libxcb-glx0-dev libxcb-image0-dev libxcb-present-dev libxcb-randr0-dev libxcb-render0-dev libxcb-render-util0-dev libxcb-shape0-dev libxcb-util-dev libxcb-xfixes0-dev meson ninja-build uthash-dev
+```
+
+- Debereis instalar todo esto en parrot, como haremos esto? pues simplemente pegaremos todo el codigo y antes de ello pondremos apt install, es decir, de la siguiente manera (también le metemos al final un -y para saltarnos la confirmación de instalación):
+
+```
+apt install libconfig-dev libdbus-1-dev libegl-dev libev-dev libgl-dev libepoxy-dev libpcre2-dev libpixman-1-dev libx11-xcb-dev libxcb1-dev libxcb-composite0-dev libxcb-damage0-dev libxcb-glx0-dev libxcb-image0-dev libxcb-present-dev libxcb-randr0-dev libxcb-render0-dev libxcb-render-util0-dev libxcb-shape0-dev libxcb-util-dev libxcb-xfixes0-dev meson ninja-build uthash-dev -y
+```
+
+![alt text](image-61.png)
+
+- Ahora tenemos que hacer un ```apt update```
+```
+apt update
+```
+![alt text](image-62.png)
+
+- Ahora nos salimos del usuario privilegiado con un ```exit```
+```
+exit
+```
+![alt text](image-63.png)
+
+- Escribimos un ```whoami``` para comprobar que estamos en nuestro usuario
+```
+whoami
+```
+![alt text](image-64.png)
+
+- Nos movemos a descargas con el siguiente comando:
+```
+cd Descargas/
+```
+
+![alt text](image-65.png)
+
+- Comprobamos con el comando ```ls``` el contenido que tenemos dentro
+``` 
+ls
+```
+![alt text](image-66.png)
+
+- ahora haremos un ```git clone``` al directorio de [picom](https://github.com/yshui/picom)
+
+```
+git clone https://github.com/yshui/picom
+```
+![alt text](image-68.png)
+
+- Ahora nos metemos dentro de picom con un ```cd```
+```
+cd picom/
+```
+![alt text](image-69.png)
+
+- En el propio readme de [picom](https://github.com/yshui/picom) nos encontraremos un apartado que se llama **TO BUILD** el cual nos dice las instrucciones para instalarlo, lo primero que nos encontraremos son estos 2 comandos.
+
+![alt text](image-70.png)
+
+```
+meson setup --buildtype=release build
+ninja -C build
+```
+
+- Por lo que dentro del directorio de picom pondrás el primer comando, es decir:
+
+```
+meson setup --buildtype=release build
+```
+![alt text](image-71.png)
+
+- Ahora ponemos el segundo comando
+
+```
+ninja -C build
+```
+
+### IMPORTANTE
+
+Me ha dado error al instalar ````meson setop --buildtype=realease build````
+
+![alt text](image-72.png)
+
+esto error lo que impide es que puedas insertar el comando de ```ninja -C build```
+
+![alt text](image-73.png)
+
+### ¿Como lo arreglé?
+EJECUTAR LOS SIGUIENTES COMANDOS:
+```
+sudo apt update
+```
+```
+sudo apt install cmake
+```
+```
+meson setup --buildtype=release build
+```
+```
+ninja -C build
+```
+### Continuación
+
+- Si ahora seguimos veremos que no está instalado a nivel de sistema picom, es decir, si hacemos un which picom no saldrá ninguna ruta.
+
+- Para terminar de instalarlo hay que hacer un 
+```
+ninja -C build install
+```
+- Es normal que te salte una alerta y te pida una contraseña (es la de iniciar sesion)
+
+![alt text](image-74.png)
+
+![alt text](image-75.png)
+
+- Si ahora hacemos un ```which picom``` si aparecerá la ruta
+
+![alt text](image-76.png)`
+
+
+- Ahora vamos a instalar rofi
+```
+sudo apt install rofi
+```
+
+![alt text](image-77.png)
+
+4:25
