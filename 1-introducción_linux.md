@@ -813,4 +813,57 @@ sudo apt install rofi
 
 ![alt text](image-77.png)
 
-4:25
+- Ahora entraremos en el archivo de config sxhkd de configuración, por lo que tendremos que poner la ruta:
+```
+cd ~/.config/sxhkd/
+```
+```
+nano sxhkdrc
+```
+![alt text](image-78.png)
+
+- En el program launcher borraremos **dmenu_run** y pondremos lo siguiente:
+```
+rofi -show run
+```
+![alt text](image-79.png)
+
+![alt text](image-81.png)
+
+- cambiaremos la linea de ```super + @space``` por:
+```
+super + d
+```
+![alt text](image-82.png)
+
+- AHORA FINALMENTE HAREMOS ```CTRL + S``` Y ```CTRL + X``` (guardar y cerrar) y se nos saldrá del archivo.
+
+- Ahora iremos a la pantalla de bloqueo para verificar si nos podemos conectar en el ***entorno de bspwm***, esto lo podemos hacer escribiendo el siguiente comentario:
+
+```
+kill -9 -1
+```
+![alt text](image-83.png)
+
+### ERROR Y POSIBLE SOLUCIÓN
+
+- Al hacer el kill -9 -1, en la ventana de inicio le deberemos dar al circulo blanco y nos debería de aparecer entre las opciones bspwm, la cosa es que no nos aparecia la opción.
+
+![alt text](image-84.png)
+
+Lo arreglé entrando con el comando ```cd``` al apartado de descargas y luego al de bspwm
+```
+cd Descargas/
+```
+```
+cd bspwm/
+```
+
+- Y dentro de esto lo que hemos hecho es instalarlo con un ```sudo apt install bspwm```
+```
+sudo apt install bspwm
+```
+
+- Una vez hecho esto ya me aparecia todo en orden
+
+![alt text](image-85.png)
